@@ -10,7 +10,7 @@ RUN yum install git java-1.8.0-openjdk-devel maven -y
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
-RUN cd /root && curl -o apache-tomcat.tar.gz http://mirrors.cnnic.cn/apache/tomcat/tomcat-8/v8.0.36/bin/apache-tomcat-8.0.36.tar.gz && tar -zxvf apache-tomcat.tar.gz && mv /root/apache-tomcat-8.0.36/* /usr/local/tomcat/ && rm -rf /usr/local/tomcat/webapps/* && rm -rf apache-tomcat*
+RUN cd /root && curl -o apache-tomcat.tar.gz http://mirrors.cnnic.cn/apache/tomcat/tomcat-8/v8.0.39/bin/apache-tomcat-8.0.39.tar.gz && tar -zxvf apache-tomcat.tar.gz && mv /root/apache-tomcat-8.0.39/* /usr/local/tomcat/ && rm -rf /usr/local/tomcat/webapps/* && rm -rf apache-tomcat*
 
 # hcpaas-web
 RUN mkdir /root/springmvc-mysql-blog
